@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            How many marbles?
+        </title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    
+    <body>
+        <h1>
+            How many marbles do you think are in the jar?
+        </h1>
+        <div class="img-banner">
+            <div class="column">
+                <img src="marbles_front.jpeg">
+            </div>
+            <div class="column">
+                <img src="marbles_top.jpeg">
+            </div>
+        </div>
+        <form action="index.html" method="post" id="encrypt">
+            <div class="entry">
+                <label for="guess">
+                    Type your guess here:
+                </label>
+                <input type="number" name="guess" required autofocus>
+                <button type="submit">
+                    Encrypt
+                </button>
+            </div> 
+        </form>
+        <div class="error"></div>
+        <div class="output" id="output">
+            <span>
+                Copy this into the slack chat:
+            </span>
+            <code id="codebox"></code>
+        </div>
+    </body>
+</html>
