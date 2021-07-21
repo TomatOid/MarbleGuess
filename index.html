@@ -5,11 +5,12 @@
             How many marbles?
         </title>
         <script src="jsencrypt/bin/jsencrypt.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
 
     <body>
-        <h1>
+        <h1 class="center">
             How many marbles do you think are in the jar?
         </h1>
         <div class="img-banner">
@@ -21,22 +22,20 @@
             </div>
         </div>
         <form action="index.html" method="post" id="encrypt">
-            <div class="entry">
-                <label for="guess">
-                    Type your guess here:
-                </label>
-                <input type="number" name="guess" required autofocus>
+            <div class="entry center">
+                <input type="number" name="guess" placeholder="type guess here" required autofocus>
                 <button type="submit">
                     Encrypt
                 </button>
             </div> 
         </form>
         <div id="error"></div>
-        <div class="output" id="output">
+        <div class="output center" id="output">
             <span>
                 Copy this into the slack chat:
             </span>
             <code id="codebox"></code>
+            <button class="btn" data-clipboard-target="#codebox">copy</button>
         </div>
         <script src="main.js"></script>
     </body>
