@@ -4,10 +4,10 @@
         <title>
             How many marbles?
         </title>
-        <script src="main.js"></script>
+        <script src="jsencrypt/bin/jsencrypt.min.js"></script>
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
-    
+
     <body>
         <h1>
             How many marbles do you think are in the jar?
@@ -31,12 +31,13 @@
                 </button>
             </div> 
         </form>
-        <div class="error"></div>
+        <div id="error"></div>
         <div class="output" id="output">
             <span>
                 Copy this into the slack chat:
             </span>
             <code id="codebox"></code>
         </div>
+        <script src="main.js"></script>
     </body>
 </html>
