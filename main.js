@@ -1,5 +1,6 @@
 const form = document.getElementById('encrypt');
 const error_box = document.getElementById('error');
+var clipboard = new ClipboardJS('.btn');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -31,7 +32,6 @@ form.addEventListener('submit', (event) => {
         // message gets padded in the encrypt function
         var ciphertext = "&%" + encrypt.encrypt(entered_number) + "%";
         document.getElementById('codebox').innerHTML = ciphertext;
-        var clipboard = new ClipboardJS('.btn');
         document.getElementById('output').style.display = "block";
         window.scrollTo(0, document.body.scrollHeight);
     }
